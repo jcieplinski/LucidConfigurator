@@ -108,47 +108,48 @@ struct ContentView: View {
                 // Controls
                 ScrollView {
                     VStack(spacing: 16) {
-                        if selectedModel != .sapphire {
-                            HStack(spacing: 12) {
-                                Button(action: {
-                                    showPlatinum.toggle()
-                                }) {
-                                    Text(showPlatinum ? "Platinum" : "Stealth")
-                                        .font(.headline)
-                                        .foregroundColor(.white)
-                                        .frame(maxWidth: .infinity)
-                                        .padding()
-                                        .background(Color.blue)
-                                        .cornerRadius(10)
-                                }
-                                
-                                if selectedModel == .air {
-                                    Button(action: {
-                                        showGlassRoof.toggle()
-                                    }) {
-                                        Text(showGlassRoof ? "Glass" : "Metal")
-                                            .font(.headline)
-                                            .foregroundColor(.white)
-                                            .frame(maxWidth: .infinity)
-                                            .padding()
-                                            .background(Color.blue)
-                                            .cornerRadius(10)
-                                    }
-                                    
-                                    Button(action: {
-                                        isGT.toggle()
-                                    }) {
-                                        Text(isGT ? "GT" : "Non-GT")
-                                            .font(.headline)
-                                            .foregroundColor(.white)
-                                            .frame(maxWidth: .infinity)
-                                            .padding()
-                                            .background(isGT ? Color.red : Color.blue)
-                                            .cornerRadius(10)
-                                    }
-                                }
+                      if selectedModel != .sapphire {
+                        HStack(spacing: 12) {
+                          Button(action: {
+                            showPlatinum.toggle()
+                          }) {
+                            Text(showPlatinum ? "Platinum" : "Stealth")
+                              .font(.headline)
+                              .foregroundColor(.white)
+                              .frame(maxWidth: .infinity)
+                              .padding()
+                              .background(Color.blue)
+                              .cornerRadius(10)
+                          }
+                          
+                          if selectedModel == .air {
+                            Button(action: {
+                              showGlassRoof.toggle()
+                            }) {
+                              Text(showGlassRoof ? "Glass" : "Metal")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.blue)
+                                .cornerRadius(10)
                             }
-                            .frame(height: 44)
+                            
+                            Button(action: {
+                              isGT.toggle()
+                            }) {
+                              Text(isGT ? "GT" : "Non-GT")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(isGT ? Color.red : Color.blue)
+                                .cornerRadius(10)
+                            }
+                          }
+                        }
+                        .frame(height: 44)
+                      }
                             
                             Button(action: {
                                 shouldResetCamera = true
@@ -164,6 +165,7 @@ struct ContentView: View {
                                 .cornerRadius(10)
                             }
                             
+                      if selectedModel != .sapphire {
                             // Color buttons
                             HStack(spacing: 12) {
                                 if selectedModel == .air {

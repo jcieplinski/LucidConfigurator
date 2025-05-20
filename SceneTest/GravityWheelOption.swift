@@ -15,7 +15,7 @@ enum GravityWheelOption: String, CaseIterable, Identifiable {
     
     var displayTitle: String {
         switch self {
-        case .aether: return "20\" / 21\" Aether"
+        case .aether: return "22\" / 23\" Aether"
         case .orion: return "21\" / 22\" Orion"
         case .voyager: return "20\" / 21\" Voyager"
         }
